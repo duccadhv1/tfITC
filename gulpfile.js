@@ -37,10 +37,12 @@ gulp.task('sass', function () {
 /**
  * Serve and watch the scss/jade files for changes
  */
-gulp.task('default', ['sass', 'templates'], function () {
+gulp.task('default', ['sass'], function () {
 
     browserSync({server: './dist'});
 
     gulp.watch('./app/scss/*.scss', ['sass']);
-    gulp.watch('./app/*.jade',      ['jade-watch']);
+    gulp.watch('./dist/*.html', reload);
+    gulp.watch('./dist/js/*.js', reload);
+    //gulp.watch('./app/*.jade',      ['jade-watch']);
 });

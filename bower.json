@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "jquery": "1.10.2"
+  },
+  "devDependencies": {
+    "react": "~0.13.3"
   }
 }
