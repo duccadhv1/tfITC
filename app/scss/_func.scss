@@ -22,7 +22,7 @@ $image-path: '../images' !default;
   background-size: $size;
 }
 
-@mixin transition($args...) {
+@mixin trans($args...) {
   -webkit-transition: $args;
   -moz-transition: $args;
   -ms-transition: $args;
@@ -34,4 +34,16 @@ $image-path: '../images' !default;
   margin: 0px;
   padding: 0px;
   list-style: none;
+}
+
+@mixin bor($color) {
+  border: 1px solid $color;
+}
+
+@mixin opacity($val) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$val*100})";
+  filter: alpha(opacity=#{$val*100});
+  -moz-opacity: $val;
+  -khtml-opacity: $val;
+  opacity: $val;
 }
