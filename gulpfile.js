@@ -30,7 +30,7 @@ gulp.task('jade-watch', ['templates'], reload);
 gulp.task('sass', function () {
     return gulp.src('./app/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./dist/'))
         .pipe(reload({stream: true}));
 });
 
@@ -44,5 +44,5 @@ gulp.task('default', ['sass'], function () {
     gulp.watch('./app/scss/*.scss', ['sass']);
     gulp.watch('./dist/*.html', reload);
     gulp.watch('./dist/js/*.js', reload);
-    //gulp.watch('./app/*.jade',      ['jade-watch']);
+    gulp.watch('./app/*.jade', ['jade-watch']);
 });

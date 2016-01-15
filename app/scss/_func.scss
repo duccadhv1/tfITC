@@ -1,4 +1,4 @@
-$image-path: '../images' !default;
+$image-path: 'images' !default;
 
 @mixin dis($pos){
   display: -moz-inline-stack;
